@@ -9,7 +9,7 @@ spec:
   ref:
     branch: v2
   secretRef:
-    name: flux-system
+    name: firefly
   url: ssh://git@github.com/weaveworks/weave-gitops
   ignore: |
     # exclude all
