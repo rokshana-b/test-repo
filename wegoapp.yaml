@@ -3,13 +3,13 @@ apiVersion: source.toolkit.fluxcd.io/v1beta1
 kind: GitRepository
 metadata:
   name: ww-gitops
-  namespace: firefly
+  namespace: my-system
 spec:
   interval: 1m0s
   ref:
     branch: v2
   secretRef:
-    name: firefly
+    name: my-system
   url: ssh://git@github.com/weaveworks/weave-gitops
   ignore: |
     # exclude all
@@ -21,7 +21,7 @@ apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
   name: ww-gitops
-  namespace: firefly
+  namespace: my-system
 spec:
   chart
 :
